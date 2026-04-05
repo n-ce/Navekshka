@@ -48,7 +48,7 @@ function App(props: any) {
 
 render(
   () => (
-    <Router root={App} base={import.meta.env.BASE_URL}>
+    <Router root={App}>
       <Route path="/" component={Library} />
       <Route path="/library" component={Library} />
       <Route path="/search" component={Search} />
