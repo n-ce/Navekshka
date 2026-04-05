@@ -30,7 +30,7 @@ function App(props: any) {
   return (
     <>
       <Panel />
-      
+
       <Show when={isLandscape() && isPlayerExpanded()}>
         <div id="middle-panel">
           <Player />
@@ -48,7 +48,7 @@ function App(props: any) {
 
 render(
   () => (
-    <Router root={App} base={import.meta.env.BASE_URL}>
+    <Router root={App} base={'/Navekshka'}>
       <Route path="/" component={Library} />
       <Route path="/library" component={Library} />
       <Route path="/search" component={Search} />
