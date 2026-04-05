@@ -1,0 +1,77 @@
+:root {
+  --bg: #fff;
+  --border: #e5e4e7;
+  --text: #000;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #16171d;
+    --border: #2e303a;
+    --text: #fff;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: system-ui, sans-serif;
+  overflow: hidden;
+}
+
+main {
+  display: flex;
+  width: 100dvw;
+  height: 100dvh;
+
+  @media (orientation: landscape) {
+    flex-direction: row;
+  }
+
+  @media (orientation: portrait) {
+    flex-direction: column-reverse;
+  }
+}
+
+/* Landscape Proportions 2:3:4 */
+.app-panel {
+  @media (orientation: landscape) {
+    flex: 2;
+    min-width: 0;
+  }
+}
+
+#middle-panel {
+  display: none;
+  background: var(--bg);
+  overflow: auto;
+  min-height: 0;
+  min-width: 0;
+  border-right: 0.0625rem solid var(--border);
+
+  @media (orientation: landscape) {
+    display: block;
+    flex: 3;
+  }
+}
+
+#active-view {
+  flex: 1;
+  overflow: auto;
+  background: var(--bg);
+  min-height: 0;
+  min-width: 0;
+
+  @media (orientation: landscape) {
+    flex: 4;
+  }
+}
+
+.panel-inner {
+  padding: 1rem;
+}

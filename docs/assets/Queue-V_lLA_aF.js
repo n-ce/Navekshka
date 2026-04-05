@@ -1,0 +1,1 @@
+import{o as e}from"./web-BEdx8bHK.js";var t=e(`<div class=view-content><h1>Queue</h1><p>Upcoming tracks in your playback queue.`);function n(){return t()}export{n as default};

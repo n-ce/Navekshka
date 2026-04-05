@@ -1,0 +1,1 @@
+import{o as e}from"./web-BEdx8bHK.js";var t=e(`<div class=view-content><h1>Player</h1><p>Now Playing information and controls.`);function n(){return t()}export{n as default};

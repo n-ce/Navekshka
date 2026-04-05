@@ -1,0 +1,77 @@
+.app-panel {
+  background: var(--bg);
+  border-color: var(--border);
+  border-style: solid;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+
+  a {
+    color: inherit;
+    text-decoration: none;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  /* Landscape: Sidepanel */
+  @media (orientation: landscape) {
+    height: 100dvh;
+    border-width: 0 0.0625rem 0 0;
+  }
+
+  /* Portrait: Bottompanel */
+  @media (orientation: portrait) {
+    width: 100%;
+    height: auto;
+    min-height: 5rem;
+    border-width: 0.0625rem 0 0 0;
+
+    .mini-player {
+      border-top: none;
+    }
+  }
+}
+
+.panel-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+}
+
+.mini-player {
+  padding: 0.5rem 1rem;
+  border-top: 0.0625rem solid var(--border);
+  background: var(--bg);
+}
+
+.nav-bar {
+  display: flex;
+  justify-content: space-around;
+  padding: 0.5rem 0;
+  border-top: 0.0625rem solid var(--border);
+}
+
+.nav-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1rem;
+}
+
+.accordion {
+  border-bottom: 0.0625rem solid var(--border);
+
+  .accordion-header {
+    padding: 0.75rem 1rem;
+    cursor: pointer;
+    font-weight: bold;
+  }
+
+  .accordion-content {
+    padding: 0 1rem 0.75rem;
+  }
+}
