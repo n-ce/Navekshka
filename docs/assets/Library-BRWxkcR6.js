@@ -1,1 +1,0 @@
-import{o as e}from"./web-BEdx8bHK.js";var t=e(`<div class=view-content><h1>Library</h1><p>Manage your collections and feeds here.`);function n(){return t()}export{n as default};

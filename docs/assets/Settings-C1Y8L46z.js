@@ -1,1 +1,0 @@
-import{o as e}from"./web-BEdx8bHK.js";var t=e(`<div class=view-content><h1>Settings</h1><p>Configure your app preferences.`);function n(){return t()}export{n as default};

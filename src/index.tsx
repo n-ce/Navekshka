@@ -1,18 +1,17 @@
 /* @refresh reload */
 import { render } from 'solid-js/web'
 import { Router, Route } from '@solidjs/router'
-import { createSignal, onMount, onCleanup, Show, lazy } from 'solid-js'
+import { createSignal, onMount, onCleanup, Show } from 'solid-js'
 import Panel from './components/Panel'
 import { isPlayerExpanded } from './store'
 import './index.css'
 
-// Lazy load views for better performance
-const Library = lazy(() => import('./views/Library'));
-const Search = lazy(() => import('./views/Search'));
-const Settings = lazy(() => import('./views/Settings'));
-const Player = lazy(() => import('./views/Player'));
-const List = lazy(() => import('./views/List'));
-const Queue = lazy(() => import('./views/Queue'));
+import Library from './views/Library';
+import Search from './views/Search';
+import Settings from './views/Settings';
+import Player from './views/Player';
+import List from './views/List';
+import Queue from './views/Queue';
 
 function App(props: any) {
   const [isLandscape, setIsLandscape] = createSignal(window.matchMedia('(orientation: landscape)').matches);
